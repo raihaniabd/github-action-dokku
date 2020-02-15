@@ -16,7 +16,6 @@ on:
 
 jobs:
   deploy:
-    needs: pytest
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
