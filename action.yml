@@ -1,6 +1,9 @@
 name: Deploy to Dokku
 author: Michał "landmaj" Wieluński
 description: Push changes to Dokku server to automatically deploy the application.
+branding:
+    icon: server
+    color: blue
 inputs:
   PRIVATE_KEY:
     description: Private key to use for SSH authentication.
