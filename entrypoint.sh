@@ -20,7 +20,7 @@ ssh-add "$SSH_PATH/deploy_key"
 
 ssh-keyscan -t rsa "$INPUT_HOST" >> "$SSH_PATH/known_hosts"
 
-ls
+cat src/app/modules/landing/common/header/header.component.html
 
 git branch
 
