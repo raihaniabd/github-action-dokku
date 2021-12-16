@@ -26,6 +26,8 @@ jobs:
           PUBLIC_KEY: ${{ secrets.DOKKU_PUBLIC_KEY }}
           HOST: ${{ secrets.DOKKU_HOST }}
           PROJECT: project-name
+          INPUT_BRANCH: main
+          OUTPUT_BRANCH: main
 ```
 
 ### Required Variables
@@ -34,7 +36,7 @@ jobs:
 * **PUBLIC_KEY**: Your SSH public key, preferably from Secrets.
 * **HOST**: The host the action will SSH to run the git push command. ie, `your.site.com`.
 * **PROJECT**: The project is a Dokku project name.
-* **BRANCH**: [OPTIONAL] Repository branch that should be used for deploy, `master` is set by default.
+* **INPUT_BRANCH**: [OPTIONAL] Repository branch that should be used for deploy, `master` is set by default.
 
 ## License
 
