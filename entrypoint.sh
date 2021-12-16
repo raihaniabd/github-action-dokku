@@ -26,6 +26,4 @@ git branch
 
 git checkout "$INPUT_BRANCH"
 
-git pull --rebase
-
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
