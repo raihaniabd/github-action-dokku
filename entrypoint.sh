@@ -20,6 +20,4 @@ ssh-add "$SSH_PATH/deploy_key"
 
 ssh-keyscan -t rsa "$INPUT_HOST" >> "$SSH_PATH/known_hosts"
 
-git pull ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
-
-GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push dokku@"$INPUT_HOST":"$INPUT_PROJECT" "$INPUT_BRANCH"
