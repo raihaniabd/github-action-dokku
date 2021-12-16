@@ -24,4 +24,6 @@ cat src/app/modules/landing/common/header/header.component.html
 
 git branch
 
+git checkout "$INPUT_HOST"
+
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
