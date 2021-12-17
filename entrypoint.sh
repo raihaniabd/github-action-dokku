@@ -30,4 +30,4 @@ DOKKU_APP_URL=ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT"
 
 echo "$DOKKU_APP_URL"
 
-GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push "$DOKKU_APP_URL" "$INPUT_BRANCH"
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push -f "$DOKKU_APP_URL" "$INPUT_BRANCH"
