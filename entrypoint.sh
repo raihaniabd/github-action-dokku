@@ -24,4 +24,10 @@ git remote -v
 
 git branch
 
-GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" 
+
+DOKKU_APP_URL=ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT"
+
+echo "$DOKKU_APP_URL"
+
+git push "$DOKKU_APP_URL" "$INPUT_BRANCH"
