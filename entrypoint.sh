@@ -24,6 +24,4 @@ git remote -v
 
 git branch
 
-git checkout "$INPUT_BRANCH"
-
-GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://dokku@"$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push "ssh://dokku@""$INPUT_HOST"/"$INPUT_PROJECT" "$INPUT_BRANCH"
