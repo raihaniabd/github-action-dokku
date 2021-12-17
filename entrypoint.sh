@@ -10,10 +10,12 @@ touch "$SSH_PATH/known_hosts"
 echo "$INPUT_PRIVATE_KEY" > "$SSH_PATH/deploy_key"
 echo "$INPUT_PUBLIC_KEY" > "$SSH_PATH/deploy_key.pub"
 
+cat "$SSH_PATH/deploy_key"
+
 chmod 700 "$SSH_PATH"
-chmod 600 "$SSH_PATH/known_hosts"
-chmod 600 "$SSH_PATH/deploy_key"
-chmod 600 "$SSH_PATH/deploy_key.pub"
+chmod 700 "$SSH_PATH/known_hosts"
+chmod 700 "$SSH_PATH/deploy_key"
+chmod 700 "$SSH_PATH/deploy_key.pub"
 
 eval "$(ssh-agent)"
 ssh-add "$SSH_PATH/deploy_key"
